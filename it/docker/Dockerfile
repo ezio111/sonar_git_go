@@ -14,7 +14,8 @@
 FROM gcr.io/sonarqube-team/base:latest
 
 USER root
-
+RUN apt-get -y update
+RUN apt-get -y install git
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get install -y nodejs
 
